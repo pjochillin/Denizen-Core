@@ -1076,7 +1076,7 @@ public class ListTag extends ArrayList<String> implements ObjectTag {
 
         // <--[tag]
         // @attribute <ListTag.replace[(regex:)<element>]>
-        // @returns ElementTag
+        // @returns ListTag
         // @description
         // Returns the list with all instances of an element removed.
         // Specify regex: at the start of the replace element to replace elements that match the Regex.
@@ -1985,7 +1985,7 @@ public class ListTag extends ArrayList<String> implements ObjectTag {
         // @attribute <ListTag.contains_any[<element>|...]>
         // @returns ElementTag(Boolean)
         // @description
-        // returns whether the list contains any of a list of given elements.
+        // returns whether the list contains any of a list of given elements, case-insensitive.
         // -->
         registerTag("contains_any", (attribute, object) -> {
             if (!attribute.hasContext(1)) {
@@ -2035,7 +2035,7 @@ public class ListTag extends ArrayList<String> implements ObjectTag {
         // @attribute <ListTag.contains[<element>|...]>
         // @returns ElementTag(Boolean)
         // @description
-        // returns whether the list contains all of the given elements.
+        // returns whether the list contains all of the given elements, case-insensitive.
         // -->
         registerTag("contains", (attribute, object) -> {
             if (!attribute.hasContext(1)) {
@@ -2098,7 +2098,7 @@ public class ListTag extends ArrayList<String> implements ObjectTag {
         // Particularly useful for command handlers, "<list[c1|c2|c3|...].closest_to[<argument>]>" to get the best option as  "did you mean" suggestion.
         // For example, "<list[dance|quit|spawn].closest_to[spwn]>" returns "spawn".
         // Be warned that this will always return /something/, excluding the case of an empty list, which will return an empty element.
-        // Uses the logic of tag "ElementTag.difference"!
+        // Uses the logic of <@link tag ElementTag.difference[<element>]>!
         // You can use that tag to add an upper limit on how different the strings can be.
         // -->
         registerTag("closest_to", (attribute, object) -> {
