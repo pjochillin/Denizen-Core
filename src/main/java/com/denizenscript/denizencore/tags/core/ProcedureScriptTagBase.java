@@ -32,6 +32,7 @@ public class ProcedureScriptTagBase {
         // @returns ObjectTag
         // @description
         // Returns the 'determine' result of a procedure script with the given context.
+        // Refer to <@link language procedure script containers>
         // -->
 
         // <--[tag]
@@ -39,6 +40,7 @@ public class ProcedureScriptTagBase {
         // @returns ObjectTag
         // @description
         // Returns the 'determine' result of a procedure script.
+        // Refer to <@link language procedure script containers>
         // -->
         if (!event.matches("proc")) {
             return;
