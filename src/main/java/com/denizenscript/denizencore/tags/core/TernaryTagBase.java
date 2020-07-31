@@ -27,6 +27,8 @@ public class TernaryTagBase {
     // Returns either the 'pass' input, or 'fail' input depending on the outcome of the condition.
     // The 'pass' input will be returned when the condition returns 'true', otherwise the 'fail' input will be returned.
     // Example: '<tern[<player.is_spawned>].pass[Player is spawned!].fail[Player is not spawned!]>'
+    // Depending on the situation, a procedure script could be better than using this tag.
+    // Refer to <@link language procedure script containers> for more information.
     // -->
     public void ternaryTag(ReplaceableTagEvent event) {
         if (!event.matches("ternary", "tern", "t")) {
