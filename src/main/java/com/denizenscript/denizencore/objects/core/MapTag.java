@@ -415,7 +415,7 @@ public class MapTag implements ObjectTag, Adjustable {
         // @returns ListTag
         // @description
         // Returns a list of all keys in this map.
-        // For example, on a map of "a/1|b/2|c/3|", using "list_keys" will return "a|b|c|".
+        // For example, on a map of "a/1|b/2|c/3|", using "keys" will return "a|b|c|".
         // -->
         registerTag("keys", (attribute, object) -> {
             ListTag result = new ListTag();
@@ -430,7 +430,7 @@ public class MapTag implements ObjectTag, Adjustable {
         // @returns ListTag
         // @description
         // Returns a list of all values in this map.
-        // For example, on a map of "a/1|b/2|c/3|", using "list_values" will return "1|2|3|".
+        // For example, on a map of "a/1|b/2|c/3|", using "values" will return "1|2|3|".
         // -->
         registerTag("values", (attribute, object) -> {
             ListTag result = new ListTag();
