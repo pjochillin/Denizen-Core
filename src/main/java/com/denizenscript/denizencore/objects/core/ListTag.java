@@ -2092,7 +2092,7 @@ public class ListTag extends ArrayList<String> implements ObjectTag {
 
         // <--[tag]
         // @attribute <ListTag.closest_to[<text>]>
-        // @returns ElementTag
+        // @returns ObjectTag
         // @description
         // Returns the item in the list that seems closest to the given value.
         // Particularly useful for command handlers, "<list[c1|c2|c3|...].closest_to[<argument>]>" to get the best option as  "did you mean" suggestion.
