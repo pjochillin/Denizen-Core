@@ -11,7 +11,7 @@ public abstract class ActionableDataProvider {
     public abstract ObjectTag getValueAt(String keyName);
 
     /**
-     * Set the valueu object to a key.
+     * Set the value object to a key.
      * Value will be ElementTag or ListTag.
      * null indicates to remove the key.
      */
